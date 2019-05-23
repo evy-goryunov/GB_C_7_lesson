@@ -36,6 +36,8 @@
 			this.btnCommand4 = new System.Windows.Forms.Button();
 			this.cCount = new System.Windows.Forms.Label();
 			this.btnCommand5 = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.btnCommand6 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnCommand1
@@ -91,11 +93,11 @@
 			// cCount
 			// 
 			this.cCount.AutoSize = true;
-			this.cCount.Location = new System.Drawing.Point(13, 286);
+			this.cCount.Location = new System.Drawing.Point(185, 289);
 			this.cCount.Name = "cCount";
-			this.cCount.Size = new System.Drawing.Size(82, 13);
+			this.cCount.Size = new System.Drawing.Size(13, 13);
 			this.cCount.TabIndex = 5;
-			this.cCount.Text = "Кол-во команд";
+			this.cCount.Text = "0";
 			// 
 			// btnCommand5
 			// 
@@ -107,6 +109,25 @@
 			this.btnCommand5.UseVisualStyleBackColor = true;
 			this.btnCommand5.Click += new System.EventHandler(this.btnCommand5_Click);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 289);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(167, 13);
+			this.label1.TabIndex = 7;
+			this.label1.Text = "Колличество отданных команд:";
+			// 
+			// btnCommand6
+			// 
+			this.btnCommand6.Location = new System.Drawing.Point(15, 13);
+			this.btnCommand6.Name = "btnCommand6";
+			this.btnCommand6.Size = new System.Drawing.Size(75, 23);
+			this.btnCommand6.TabIndex = 8;
+			this.btnCommand6.Text = "button1";
+			this.btnCommand6.UseVisualStyleBackColor = true;
+			this.btnCommand6.Click += new System.EventHandler(this.btnCommand6_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +135,8 @@
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(545, 311);
+			this.Controls.Add(this.btnCommand6);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnCommand5);
 			this.Controls.Add(this.cCount);
 			this.Controls.Add(this.btnCommand4);
@@ -138,6 +161,8 @@
 		private System.Windows.Forms.Button btnCommand4;
 		private System.Windows.Forms.Label cCount;
 		private System.Windows.Forms.Button btnCommand5;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnCommand6;
 	}
 }
 
