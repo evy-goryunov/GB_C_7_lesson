@@ -22,7 +22,7 @@ namespace Guess_The_Number
 {
 	public partial class Form1 : Form
 	{
-		int questNumber;
+		public int questNumber;
 		public Form1()
 		{
 			
@@ -32,38 +32,46 @@ namespace Guess_The_Number
 			QuestLable.Visible = false;
 		}
 
+		// выход
 		private void btnExit_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
 
+		// старт
 		private void btnStart_Click(object sender, EventArgs e)
 		{
-			Random r = new Random();
-			questNumber = r.Next(0, 100);
+			
 			QuestLable.Text = "Угадайте число от 0 до 100";
 			QuestLable.Visible = true;
-			TitleLbl.Text = questNumber.ToString();
+			
+			//убрать комент для проверки
+			//TitleLbl.Text = DataClass.questNumber.ToString();
 		}
 
-		private void GuessText_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
+		
+		// проверка ответа игрока
 		private void btnGuess_Click(object sender, EventArgs e)
 		{
-			if (int.Parse(GuessText.Text) > questNumber)
+			if (DataClass.PLG > DataClass.questNumber)
 			{
 				QuestLable.Text = "Слишком большое число";
 			}
-			else if (int.Parse(GuessText.Text) < questNumber)
+			else if (DataClass.PLG < DataClass.questNumber)
 			{
 				QuestLable.Text = "Слишком маленькое число";
-			} else if (int.Parse(GuessText.Text) == questNumber)
+			}
+			else if (DataClass.PLG == DataClass.questNumber)
 			{
 				QuestLable.Text = "Вы угадали!";
 			}
+		}
+
+		// переход на вторую форму
+		private void btnInput_Click(object sender, EventArgs e)
+		{
+			Form2 newForm2 = new Form2();
+			newForm2.Show();
 		}
 	}
 }

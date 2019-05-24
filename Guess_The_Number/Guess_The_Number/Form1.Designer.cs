@@ -32,8 +32,8 @@
 			this.btnExit = new System.Windows.Forms.Button();
 			this.btnStart = new System.Windows.Forms.Button();
 			this.QuestLable = new System.Windows.Forms.Label();
-			this.GuessText = new System.Windows.Forms.TextBox();
 			this.btnGuess = new System.Windows.Forms.Button();
+			this.btnInput = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// TitleLbl
@@ -75,17 +75,9 @@
 			this.QuestLable.TabIndex = 4;
 			this.QuestLable.Text = "label1";
 			// 
-			// GuessText
-			// 
-			this.GuessText.Location = new System.Drawing.Point(32, 110);
-			this.GuessText.Name = "GuessText";
-			this.GuessText.Size = new System.Drawing.Size(35, 20);
-			this.GuessText.TabIndex = 5;
-			this.GuessText.TextChanged += new System.EventHandler(this.GuessText_TextChanged);
-			// 
 			// btnGuess
 			// 
-			this.btnGuess.Location = new System.Drawing.Point(496, 70);
+			this.btnGuess.Location = new System.Drawing.Point(496, 85);
 			this.btnGuess.Name = "btnGuess";
 			this.btnGuess.Size = new System.Drawing.Size(75, 23);
 			this.btnGuess.TabIndex = 6;
@@ -93,13 +85,23 @@
 			this.btnGuess.UseVisualStyleBackColor = true;
 			this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
 			// 
+			// btnInput
+			// 
+			this.btnInput.Location = new System.Drawing.Point(496, 56);
+			this.btnInput.Name = "btnInput";
+			this.btnInput.Size = new System.Drawing.Size(75, 23);
+			this.btnInput.TabIndex = 8;
+			this.btnInput.Text = "Input";
+			this.btnInput.UseVisualStyleBackColor = true;
+			this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(603, 350);
+			this.Controls.Add(this.btnInput);
 			this.Controls.Add(this.btnGuess);
-			this.Controls.Add(this.GuessText);
 			this.Controls.Add(this.QuestLable);
 			this.Controls.Add(this.btnStart);
 			this.Controls.Add(this.btnExit);
@@ -118,8 +120,8 @@
 		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Button btnStart;
 		private System.Windows.Forms.Label QuestLable;
-		private System.Windows.Forms.TextBox GuessText;
 		private System.Windows.Forms.Button btnGuess;
+		private System.Windows.Forms.Button btnInput;
 	}
 }
 
