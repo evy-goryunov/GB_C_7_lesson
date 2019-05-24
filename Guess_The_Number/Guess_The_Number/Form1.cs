@@ -8,6 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Горюнов Егвений
+/// Используя Windows Forms, разработать игру «Угадай число». 
+/// Компьютер загадывает число от 1 до 100, а человек пытается его угадать за минимальное число попыток. 
+/// Компьютер говорит, больше или меньше загаданное число введенного.  
+/// a) Для ввода данных от человека используется элемент TextBox;
+/// б) ** Реализовать отдельную форму c TextBox для ввода числа.
+
+/// </summary>
+
 namespace Guess_The_Number
 {
 	public partial class Form1 : Form
@@ -43,7 +53,14 @@ namespace Guess_The_Number
 
 		private void btnGuess_Click(object sender, EventArgs e)
 		{
-			if (int.Parse(GuessText.Text) == questNumber)
+			if (int.Parse(GuessText.Text) > questNumber)
+			{
+				QuestLable.Text = "Слишком большое число";
+			}
+			else if (int.Parse(GuessText.Text) < questNumber)
+			{
+				QuestLable.Text = "Слишком маленькое число";
+			} else if (int.Parse(GuessText.Text) == questNumber)
 			{
 				QuestLable.Text = "Вы угадали!";
 			}
